@@ -18,9 +18,9 @@ export function ListaTarefas() {
   }
 
   function remover(indice: number) {
-    
+    const novaLista = [...itens];
     itens.splice(indice, 1);
-    setItens(itens);
+    setItens(novaLista);
   }
 
   return (
@@ -46,4 +46,5 @@ export function ListaTarefas() {
       <p>Total: {itens.length}</p>
     </div>
   );
+
 }
